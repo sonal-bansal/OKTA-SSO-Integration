@@ -175,14 +175,14 @@ function mainProcess(event, context, callback) {
                         "key": "Set-Cookie",
                         "value" : cookie.serialize('TOKEN', CryptoJS.AES.encrypt(jwt.sign(
                           { },
-                          {"key":config.PRIVATE_KEY.trim(),"passphrase":'takeda_zs'},
+                          {"key":config.PRIVATE_KEY.trim(),"passphrase":config.PARAPHRASE},
                           {
                             "audience": headers.host[0].value,
                             "subject": auth.getSubject(decodedData),
                             "expiresIn": config.SESSION_DURATION,
                             "algorithm": "RS256"
                           } // Options
-                        ),'takeda_zs').toString(), {
+                        ),config.PARAPHRASE).toString(), {
                           path: '/',
                           maxAge: config.SESSION_DURATION
                         }).concat("; SameSite=None").concat("; Secure")
@@ -229,7 +229,7 @@ function mainProcess(event, context, callback) {
     console.log("Request received with TOKEN cookie. Validating.");
 
     // Verify the JWT, the payload email, and that the email ends with configured hosted domain
-    jwt.verify(CryptoJS.AES.decrypt(cookie.parse(headers["cookie"][0].value).TOKEN, 'takeda_zs').toString(CryptoJS.enc.Utf8), config.PUBLIC_KEY.trim(), { algorithms: ['RS256'] }, function(err, decoded) {
+    jwt.verify(CryptoJS.AES.decrypt(cookie.parse(headers["cookie"][0].value).TOKEN, config.PARAPHRASE).toString(CryptoJS.enc.Utf8), config.PUBLIC_KEY.trim(), { algorithms: ['RS256'] }, function(err, decoded) {
       if (err) {
         switch (err.name) {
           case 'TokenExpiredError':
