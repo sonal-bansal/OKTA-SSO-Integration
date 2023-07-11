@@ -15,9 +15,11 @@
     "AUTHN": "OKTA",
     "PRIVATE_KEY": "<<Your private key>>",
     "PUBLIC_KEY": "<<Your public key>>",
+    "PARAPHRASE" : "<<For private key pharaphrase>>",
     "DISCOVERY_DOCUMENT": "<<OKTA Developer URL>>/.well-known/openid-configuration",
     "SESSION_DURATION": 3600,
     "BASE_URL": "<<OKTA Developer URL>>",
     "CALLBACK_PATH": "/_callback",
     "AUTHZ": "OKTA"
+    
 }
