@@ -1,23 +1,23 @@
 {
     "AUTH_REQUEST": {
-        "client_id": "0oa93lhhtxJMTzZYJ5d7",
+        "client_id": "<<Your okta application client ID>>",
         "response_type": "code",
         "scope": "openid email",
-        "redirect_uri": "https://d2d8imqllvq9sg.cloudfront.net/_callback"
+        "redirect_uri": "<<Your cloudfront URL>>/_callback"
     },
     "TOKEN_REQUEST": {
-        "client_id": "0oa93lhhtxJMTzZYJ5d7",
-        "redirect_uri": "https://d2d8imqllvq9sg.cloudfront.net/_callback",
+        "client_id": "<<Your okta application client ID>>",
+        "redirect_uri": "<<Your cloudfront URL>>/_callback",
         "grant_type": "authorization_code",
-        "client_secret": "Eo_mSfJHJY9f51z2YDwrWZtV1sj3FjH_fJhvXtRW"
+        "client_secret": "<<Your okta application client Secret>>"
     },
-    "DISTRIBUTION": "E25JHI86SOZWLG",
+    "DISTRIBUTION": "<<Your CloudFront Distribution ID>>",
     "AUTHN": "OKTA",
-    "PRIVATE_KEY": "-----BEGIN RSA PRIVATE KEY-----\nProc-Type: 4,ENCRYPTED\nDEK-Info: AES-128-CBC,7A13B336C3F2F1C5B0DE014EB8878A17\n\n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\n-----END RSA PRIVATE KEY-----\n",
-    "PUBLIC_KEY": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAzVE4Uhlw9dg9xq7m+Lkt\nV32htEV4JJoJtY2FH9fyca9UrRjVj0nzR8TLrB6gHqFqG4v2e5CQxvuovhrY5rxU\nEx6vkGTiwzlo+W5U+lG8VeNx4jDDfieJqIjwjWXE+xGAuUh2ec2/pRIUh8N1uTuR\nttWMfhElHPZxlgNh4UcJ1j0krnG2fXzdatSqlAwLL7l+POvfXUWdxh8PI+rM0Pnr\nIy36mId2+nSX5Q42BB4xpJB/gDbMM/Y7IxrtViFVWlJOoFj/UtH5ipAuAI2txZ8x\nwsqhsIf9WnDM/RrYy5XmCscJ20jp/u4PVMgNul4eU/lWtXJXXE5LRhC268AMDjaE\nG62wiDJ0dBse9eb7G+cKY7vut+U2m6XH5wtVdIgbeT8SzLcm12WejB8e00/jO9X6\nJxn/zLE3UIPkOtRVQxGU7r0U10CKcK73niVmlB8BAOBjG0pb5X1LUh9xF58b7Cxp\n+KUlHR53cPjc4QMKPfa/JZCzIbImdS+71BTDUu5QSn+LAtPAk6XBKZwB8mUSHtkf\nw1XE23/UXCDvJm8Em4W3O72rNHyBSWY3EL+VOf9VW/1iN/CJXmpA4ZWLCjr1UX3K\nlXj2sHQLKkmAxRpxr8J2ZZUGDrgdvwsL94TJ9+1kwbsfnqoV0uEMSUbu51vm1plZ\nyIBBXnlTcQfDKwaiknC8K5UCAwEAAQ==\n-----END PUBLIC KEY-----\n",
-    "DISCOVERY_DOCUMENT": "https://dev-6874828.okta.com/.well-known/openid-configuration",
+    "PRIVATE_KEY": "<<Your private key>>",
+    "PUBLIC_KEY": "<<Your public key>>",
+    "DISCOVERY_DOCUMENT": "<<OKTA Developer URL>>/.well-known/openid-configuration",
     "SESSION_DURATION": 3600,
-    "BASE_URL": "https://dev-6874828.okta.com",
+    "BASE_URL": "<<OKTA Developer URL>>",
     "CALLBACK_PATH": "/_callback",
     "AUTHZ": "OKTA"
 }
